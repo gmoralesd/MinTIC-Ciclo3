@@ -1,0 +1,11 @@
+﻿@page "/"
+@inject IServiceMovie movie
+
+<SliderMovies Movies="Movies"></SliderMovies>
+@code {
+    private List<Movie> Movies;
+    protected override void OnInitialized()
+    {
+        Movies = movie.GetMovies();
+    }
+}
