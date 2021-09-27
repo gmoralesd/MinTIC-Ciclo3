@@ -1,0 +1,12 @@
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.csproj.AssemblyReference.cache
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.AssemblyInfoInputs.cache
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.AssemblyInfo.cs
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.csproj.CoreCompileInputs.cache
+C:\ProysCicloIII\popcorntime\Shared\bin\Debug\net5.0\popcorntime.Shared.deps.json
+C:\ProysCicloIII\popcorntime\Shared\bin\Debug\net5.0\popcorntime.Shared.dll
+C:\ProysCicloIII\popcorntime\Shared\bin\Debug\net5.0\ref\popcorntime.Shared.dll
+C:\ProysCicloIII\popcorntime\Shared\bin\Debug\net5.0\popcorntime.Shared.pdb
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.dll
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\ref\popcorntime.Shared.dll
+C:\ProysCicloIII\popcorntime\Shared\obj\Debug\net5.0\popcorntime.Shared.pdb
