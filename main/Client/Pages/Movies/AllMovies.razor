@@ -1,0 +1,106 @@
+@page "/movies"
+@using popcorntime.Client.Pages.Components
+@inject IServiceMovie movie
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1> movie card - grid</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="?#">Inicio</a></li>
+						<li> <span class="ion-ios-arrow-right"></span> movie card</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="topbar-filter">
+                    <p>Encontradas <span>10 peliculas</span></p>
+					<label>Ordenado por:</label>
+					<select>
+						<option value="popularity">Popularidad descendiente</option>
+						<option value="popularity">Popularidad ascendente</option>
+						<option value="rating">Clasificación descendente</option>
+						<option value="rating">Calificación ascendente</option>
+					</select>
+					<a href="movielist.html" class="list"><i class="ion-ios-list-outline "></i></a>
+					<a  href="moviegrid.html" class="grid"><i class="ion-grid active"></i></a>
+				</div>
+				
+
+              <CardMovieComponent Movies="Movies"></CardMovieComponent>
+
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="sidebar">
+					<div class="searh-form">
+						<h4 class="sb-title">Buscar</h4>
+						<form class="form-style-1" action="#">
+							<div class="row">
+								<div class="col-md-12 form-it">
+									<label>Nombre</label>
+									<input type="text" placeholder="">
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Genero</label>
+									<div class="group-ip">
+										<select>
+											<option value="">Selecciona un genero</option>
+											<option value="1">accion</option>
+					                        <option value="2">aventura</option>
+					                        <option value="3">animacion</option>
+					                        <option value="4">comedia</option>
+					                        <option value="5">fantasia</option>
+											<option value="6">romance</option>
+											<option value="7">drama</option>
+
+										</select>
+									</div>	
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Rango Calificación</label>
+									<select>
+									  <option value="range">-- Selecciona un rango --</option>
+									</select>
+								</div>
+								<div class="col-md-12 form-it">
+									<label>Año de estreno</label>
+									<div class="row">
+										<div class="col-md-6">
+											<select>
+											  <option value="range">desde</option>
+											  <option value="number">10</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<select>
+											  <option value="range">hasta</option>
+											  <option value="number">20</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 ">
+									<input class="submit" type="submit" value="buscar">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@code {
+    private List<Movie> Movies;
+    protected override void OnInitialized()
+    {
+        Movies = movie.GetMovies();
+    }
+}
