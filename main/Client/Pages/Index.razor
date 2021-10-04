@@ -1,0 +1,18 @@
+﻿@page "/"
+@using popcorntime.Client.Pages.Components
+@using popcorntime.Client.Shared
+@inject IServiceMovie movie
+@inject IJSRuntime JSRuntime
+<SliderMovies Movies="Movies"></SliderMovies>
+@code {
+    private List<Movie> Movies;
+    protected override void OnInitialized()
+    {
+        Movies = movie.GetMovies();
+    }
+    IJSObjectReference JSObjectReference {get; set;}
+    protected override async Task OnAfterRenderAsync(bool firstTime)
+    {
+        JSObjectReference = await JSRuntime.InvokeAsync<IJSObjectReference>("import","/js/custom.js");
+    }
+}
