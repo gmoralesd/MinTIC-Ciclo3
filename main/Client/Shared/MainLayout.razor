@@ -1,0 +1,18 @@
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@using popcorntime.Client.Shared
+    <Login></Login>
+    <NavMenu />
+  
+
+    <div class="main">
+        <div>@Body</div>
+    </div>
+
+@code {
+	IJSObjectReference JSObjectReference {get; set;}
+    protected override async Task OnParametersSetAsync()
+    {
+        JSObjectReference = await JSRuntime.InvokeAsync<IJSObjectReference>("import","/js/custom.js");
+    }
+}
